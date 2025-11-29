@@ -1,41 +1,12 @@
-import { type NextRequest } from "next/server";
 import { ImageResponse } from "next/og";
 
 
-export async function GET(req: NextRequest) {
-  const { searchParams } = req.nextUrl;
-  const parameters = Object.fromEntries(searchParams.entries());
+export async function GET() {
 
   return new ImageResponse(
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        width: "100%",
-        height: "100%",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#6f90ab",
-        fontSize: "2rem",
-        color: "#fff",
-      }}
-    >
-      <span>Noto Sans (Default Font)</span>
-      <span
-        style={{
-          fontFamily: "JetBrains Mono",
-        }}
-      >
-        JetBrains Mono (using GoogleFont class)
-      </span>
-      <span>These are emojiss: 😎🌩️</span>
-      <span
-        style={{
-          fontFamily: "JetBrains Mono",
-        }}
-      >
-        Parameters: {JSON.stringify(parameters)}
-      </span>
+    <div className="flex h-full w-full flex-col items-center justify-center bg-white p-10">
+      <div className="text-center text-[60px] font-bold text-black">Welcome to My Site</div>
+      <div className="mt-5 text-[30px] text-gray-600">Generated with NextJS ImageResponse</div>
     </div>
   );
 }
