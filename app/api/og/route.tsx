@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
       >
         JetBrains Mono (using GoogleFont class)
       </span>
-      <span>These are emojis: 😎🌩️</span>
+      <span>These are emojiss: 😎🌩️</span>
       <span
         style={{
           fontFamily: "JetBrains Mono",
